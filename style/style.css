@@ -1,0 +1,40 @@
+body {
+    font-family: 'Quicksand', sans-serif;
+}
+ 
+h2, h3 {
+    color: #00a2c6;
+}
+
+footer {
+    padding: 20px;
+    color: white;
+    background-color: #00a2c6;
+    text-align: center;
+    font-weight: bold;
+}
+
+nav a {
+    font-size: 18px;
+    font-weight: 400; /* ketebalan teks */
+    text-decoration: none; /* menghapus underline pada link */
+}
+
+nav a:hover {
+    font-weight: bold; /* efek tebal kalo kursor ngarah ke link itu*/
+}
+
+.profile header { /* dikasih titik (.) karena sebagai selector */
+    text-align: center;
+}
+
+.featured-image { /* perlu kita terapkan pada seluruh elemen gambar, kecuali logo Kota Bandung dalam elemen <aside> */
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover; /* mengatasi overflow */
+    object-position: center; /* mengatasi overflow */
+}
+
+.profile img {
+    width: 200px;
+}
