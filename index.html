@@ -1,6 +1,7 @@
 <!DOCTYPE html><html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial scale=1.0">
     <title>Halaman Profil Bandung</title>
     <link rel="stylesheet" href="/style/style.css">
 
@@ -13,9 +14,10 @@
   <body>
     <!--HEAD-->
     <header>
-      <h1>Bandung</h1>
-      <p>Kota metropolitan terbesar di Provinsi Jawa Barat, sekaligus menjadi ibu kota provinsi tersebut.</p>
-
+      <div class="jumbotron">
+        <h1>Bandung</h1>
+        <p>Kota metropolitan terbesar di Provinsi Jawa Barat, sekaligus menjadi ibu kota provinsi tersebut.</p>
+      </div>
       <nav> <!--elemen navigasi-->
         <ul>
           <li><a href="#sejarah">Sejarah</a></li>
@@ -29,7 +31,7 @@
     <main>
       <!--Konten Artikel-->
       <div id="content">
-        <article id="sejarah">
+        <article id="sejarah" class="card">
           <h2>Sejarah</h2> <!--atribut id termasuk dalam atribut global (digunakan untuk elemen apapun)-->
           <img src="assets/image/history.jpg" alt="sejarah" class="featured-image" />
 
@@ -42,7 +44,7 @@
           </p>
         </article>
         
-        <article id="geografis">
+        <article id="geografis" class="card">
           <h2>Geografis</h2>
           <img src="assets/image/geografis.jpg" alt="geografis" class="featured-image" />
           <p>
@@ -53,7 +55,7 @@
           </p>
         </article>
         
-        <article id="wisata">
+        <article id="wisata" class="card">
           <h2>Wisata</h2>
         
           <p>
@@ -82,7 +84,7 @@
       
       <!--Konten Samping (Aside)-->
       <aside>
-        <article class="profile">
+        <article class="profile card">
           <header>
             <h2>Kota Bandung</h2>
             <p>Kota Kembang Paris van Java</p>
