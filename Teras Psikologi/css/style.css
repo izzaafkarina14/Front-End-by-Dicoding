@@ -58,7 +58,6 @@ header.navbar-container .nav-list li:hover a {
 }
 
 main {
-    
     width: 100%;
     max-width: 1600px;
     margin-inline: auto;
@@ -89,7 +88,7 @@ main .content .content-description p {
     line-height: 1.7rem;
 }
 
-main .content .content-description button {
+main .content .content-description button a {
     padding: 0.8rem 2.5rem;
     border: 3px solid transparent;
     border-radius: 999px;
@@ -100,13 +99,16 @@ main .content .content-description button {
     text-transform: uppercase;
     font-size: 1rem;
     font-weight: 500;
-    color: #C4DCF5;
+    color: aliceblue;
 
     cursor: pointer;
     transition: all 0.2s ease-in;
+    text-decoration: none;
+    border: none;
+    outline: none;
 }
 
-main .content .content-description button:hover {
+main .content .content-description button a:hover {
     border: 3px solid #D46776;
     background-color: transparent;
 
@@ -123,50 +125,6 @@ main .content .content-image img {
     width: 300px;
     min-width: 250px;
     margin: auto;
-}
-
-main .solutions-section {
-    flex: 1; /* Biarkan konten artikel mengisi sisa ruang */
-    padding: 0 4rem; /* Atur padding sesuai kebutuhan */
-    margin-top: 2rem; /* Berikan jarak antara konten utama dan artikel */
-    display: flex;
-    justify-content: center; /* Menengahkan konten artikel */
-}
-
-main .solutions-section .card {
-    width: 1600px; /* Sesuaikan lebar artikel sesuai kebutuhan */
-    background-color: #fff;
-    border-radius: 15px;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin-bottom: 20px;
-    transition: all 0.3s ease;
-
-    flex-basis: calc(50% - 20px); /* Menjadikan setiap kartu setengah lebar container */
-    max-width: calc(50% - 20px);
-    margin-bottom: 20px; /* Menambahkan jarak antara kartu */
-}
-
-main .solutions-section .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.2);
-}
-
-main .solutions-section .card h3 {
-    font-size: 24px;
-    margin-bottom: 10px;
-    color: #333;
-}
-
-main .solutions-section .card p {
-    font-size: 16px;
-    color: #666;
-}
-
-/* Pengaturan untuk konten KERING dan KOFFE */
-#solutions-section {
-    display: flex;
-    justify-content: space-between; /* Menyisipkan ruang di antara dua kolom */
 }
 
 main aside {
@@ -210,6 +168,121 @@ main aside .social-media li a:hover {
     color: #C4DCF5;
 }
 
+/* ARTIKEL (SOLUTIONS) */
+.box {
+    width: 700px;
+    height: 500px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.5s ease;
+}
+
+.box:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7); /* Efek bayangan saat hover */
+}
+
+.box p {
+    color: aliceblue;
+    text-align: center;
+}
+
+blockquote {
+    color: aliceblue;
+}
+
+.box img {
+    width: 70%;
+    height: auto;
+    border-radius: 20px;
+}
+
+.box:nth-child(odd) {
+    background-color: #D46776;
+}
+
+.box:nth-child(even) {
+    background-color: #D46776;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    height: 50vh;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* ABOUT */
+.founder-box {
+    width: 1450px;
+    height: 550px;
+    display: flex;
+    background-color: #C4DCF5;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.5s ease;
+}
+
+.founder-box:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7); /* Efek bayangan saat hover */
+}
+
+.founder h2 {
+    padding-top: 4rem;
+}
+
+.founder figure img{
+    width: 400px;
+    height: auto;
+}
+
+.founder figcaption {
+    text-align: center;
+}
+
+.founder h4 {
+    padding-top: 10rem;
+    font-size: 18px;
+    font-weight: normal;
+    justify-content: center;
+    align-items: center;
+}
+
+.founder table {
+    padding-left: 20rem;
+}
+
+/* FOOTER */
+footer {
+    padding: 20px;
+    color: white;
+    background-color: #D46776;
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.footer-icons {
+    display: flex;
+    justify-content: center;
+}
+
+.icon {
+    margin: 0 10px;
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+}
+
+.icon img {
+    width: 24px;
+    height: 24px;
+}
+
 /* Medium devices (768px dan di bawahnya) */
 @media screen and (max-width: 768px) {
     header.navbar-container {
@@ -240,5 +313,18 @@ main aside .social-media li a:hover {
 
     main .content .content-image {
         order: -1; /* mengatur urutan konten dari susunan flex items. kita berikan -1, flex item yang bersangkutan akan bertempat pada urutan awal */
+    }
+
+    .flex {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .solutions-section {
+        padding-top: 2rem;
+    }
+
+    .founder {
+        padding-top: 2rem;
     }
 }
