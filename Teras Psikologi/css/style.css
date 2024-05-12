@@ -217,43 +217,62 @@ blockquote {
 }
 
 /* ABOUT */
-.founder-box {
-    width: 1450px;
-    height: 550px;
+#about {
+    margin-top: 3rem; /* Tambahkan margin atas untuk memisahkan konten */
+}
+
+.about .founder-box {
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
     display: flex;
+    padding: 2rem;
+    flex-direction: column;
     background-color: #C4DCF5;
     border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     transition: box-shadow 0.5s ease;
 }
 
-.founder-box:hover {
+.about .founder {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.about .founder-box:hover {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7); /* Efek bayangan saat hover */
 }
 
-.founder h2 {
-    padding-top: 4rem;
+.about .founder figure {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
 }
 
-.founder figure img{
-    width: 400px;
+.about .founder figure img {
+    max-width: 100%;
     height: auto;
+    border-radius: 20px;
 }
 
-.founder figcaption {
+.about .founder section {
+    width: 100%;
+}
+
+.about .founder h2 {
     text-align: center;
+    margin-top: 2rem;
 }
 
-.founder h4 {
-    padding-top: 10rem;
-    font-size: 18px;
-    font-weight: normal;
-    justify-content: center;
-    align-items: center;
+.about .founder h4 {
+    font-size: 1rem;
+    text-align: center;
+    padding-top: 1rem;
 }
 
-.founder table {
-    padding-left: 20rem;
+.about .founder table {
+    margin: 0 auto;
 }
 
 /* FOOTER */
@@ -315,16 +334,16 @@ footer {
         order: -1; /* mengatur urutan konten dari susunan flex items. kita berikan -1, flex item yang bersangkutan akan bertempat pada urutan awal */
     }
 
+    .about .founder {
+        gap: 1rem;
+    }
+
     .flex {
         flex-direction: column;
         align-items: center;
     }
 
     .solutions-section {
-        padding-top: 2rem;
-    }
-
-    .founder {
         padding-top: 2rem;
     }
 }
