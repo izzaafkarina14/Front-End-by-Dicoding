@@ -25,6 +25,10 @@ header.navbar-container {
     z-index: 9999; /* biar navbar selalu di lapisan paling atas */
 }
 
+#navbar-container {
+    position: sticky;
+}
+
 header.navbar-container .logo img {
     width: 300px;
 }
@@ -65,6 +69,7 @@ main {
 
     display: flex;
     flex-direction: column;
+    gap: 2rem;
 }
 
 main .content {
@@ -72,6 +77,7 @@ main .content {
 
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 main .content .content-description {
@@ -117,55 +123,12 @@ main .content .content-description button a:hover {
 
 main .content .content-image {
     flex: 1;
-
-    display: flex;
 }
 
 main .content .content-image img {
     width: 300px;
     min-width: 250px;
     margin: auto;
-}
-
-main aside {
-    position: fixed;
-    inset-block: 0;
-    inset-inline-end: 0;
-}
-
-main aside .social-media {
-    height: 100%;
-    display: flex;
-}
-
-main aside .social-media ul {
-    padding: 1.5rem 1rem;
-    border-top-left-radius: 12px;
-    border-bottom-left-radius: 12px;
-    margin: auto;
-    background-color: #D46776;
-
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    justify-content: center;
-    gap: 1.5rem;
-}
-
-main aside .social-media li {
-    list-style-type: none;
-}
-
-main aside .social-media li a {
-    text-decoration: none;
-    font-size: 1.5rem;
-    color: white;
-
-    transition: all 0.1s ease-in-out;
-}
-
-main aside .social-media li a:hover {
-    color: #C4DCF5;
 }
 
 /* ARTIKEL (SOLUTIONS) */
@@ -214,6 +177,22 @@ blockquote {
     height: 50vh;
     flex-wrap: wrap;
     gap: 20px;
+}
+
+/* ASIDE */
+.aside {
+    padding: 20px;
+    background-color: #C4DCF5;
+    width: 300px;
+    position: fixed;
+    inset-block: 0;
+    inset-inline-end: 0;
+    display: none;
+}
+
+.aside figure img {
+    height: 250px;
+    width: auto;
 }
 
 /* ABOUT */
@@ -302,6 +281,7 @@ footer {
     height: 24px;
 }
 
+
 /* Medium devices (768px dan di bawahnya) */
 @media screen and (max-width: 768px) {
     header.navbar-container {
@@ -315,11 +295,16 @@ footer {
     
     main {
         padding: 1rem 3rem;
+        flex-direction: column;
     }
 
     main .content {
         flex-direction: column;
         gap: 2rem;
+    }
+
+    main .content .content-description {
+        order: -1; /* Menggeser deskripsi konten ke atas */
     }
 
     main .content .content-description .title {
@@ -332,6 +317,12 @@ footer {
 
     main .content .content-image {
         order: -1; /* mengatur urutan konten dari susunan flex items. kita berikan -1, flex item yang bersangkutan akan bertempat pada urutan awal */
+    }
+
+    main .aside {
+        width: 100%; /* Mengisi lebar layar pada tablet dan mobile */
+        margin-inline-start: auto;
+        order: 2; /* Menggeser aside ke bawah deskripsi konten */
     }
 
     .about .founder {
